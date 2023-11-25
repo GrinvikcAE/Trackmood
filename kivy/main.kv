@@ -1,0 +1,50 @@
+MDScreen:
+    name: 'main'
+    MDFloatLayout:
+        md_bg_color: 218/255, 221/255, 216/255, 1
+        Image:
+            source: 'assets/trackmood-logo.png'
+            size_hint: 0.2, 0.2
+            pos_hint: {'center_x': 0.27, 'center_y': 0.75}
+        MDLabel:
+            text: 'r a c k m o o d'
+            font_name: 'Bras Mono'
+            font_size: '23sp'
+            pos_hint: {'center_x': 0.89, 'center_y': 0.75}
+            color: rgba(91, 119, 127, 255)
+        MDFillRoundFlatButton:
+            text: 'LOGIN'
+            size_hint: 0.66, 0.09
+            md_bg_color: (91/255, 119/255, 127/255, 255/255)
+            pos_hint: {'center_x': 0.515, 'center_y': 0.3}
+            background_color: 0, 0, 0, 0
+            font_name: 'Bras Mono'
+            font_size: '23sp'
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'login'
+            canvas.before:
+                Color:
+                    rgb: rgba(218, 221, 216, 255)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [5]
+        MDFillRoundFlatButton:
+            text: 'SIGNUP'
+            size_hint: 0.66, 0.09
+            md_bg_color: (91/255, 119/255, 127/255, 255/255)
+            pos_hint: {'center_x': 0.515, 'center_y': 0.2}
+            background_color: 0, 0, 0, 0
+            font_name: 'Bras Mono'
+            font_size: '23sp'
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'signup'
+            canvas.before:
+                Color:
+                    rgb: rgba(218, 221, 216, 255)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [5]
