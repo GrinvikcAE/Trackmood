@@ -3,10 +3,11 @@ from typing import Optional, Union
 from fastapi import Depends, Request
 from fastapi_users import BaseUserManager, IntegerIDMixin, InvalidPasswordException, exceptions, models, schemas
 
-from auth.schemas import UserCreate
+from .schemas import UserCreate
+from .utils import get_user_db
 from config import SECRET_KEY
 
-from auth.database import User, get_user_db
+from .models import User
 
 SECRET = SECRET_KEY
 
