@@ -4,9 +4,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from database import get_async_session
 
-from comment.models import comment
+from .models import comment
 
-from comment.schemas import CommentCreate
+from .schemas import CommentCreate
 
 router = APIRouter(
     prefix="/comment",
